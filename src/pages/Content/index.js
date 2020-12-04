@@ -1,11 +1,6 @@
-import { printLine } from './modules/print';
 import $ from 'jquery'
 import SpeechSynthesis from '../../services/SpeechSynthesis'
 
-console.log('Content script works!');
-console.log('Must reload extension for modifications to take effect.2');
-
-printLine("Using the 'printLine' function from the Print Module");
 
 const getText = () => {
   const leadText = $('p.bold').text()
