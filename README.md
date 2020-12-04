@@ -44,7 +44,7 @@ Please open up an issue to nudge me to keep the npm packages up-to-date. FYI, it
    2. Check `Developer mode`
    3. Click on `Load unpacked extension`
    4. Select the `build` folder.
-8. Happy hacking.
+8. Happy hacking. 
 
 ## Structure
 
