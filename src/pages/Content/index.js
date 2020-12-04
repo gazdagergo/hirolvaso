@@ -8,8 +8,9 @@ console.log('Must reload extension for modifications to take effect.2');
 printLine("Using the 'printLine' function from the Print Module");
 
 const getText = () => {
+  const leadText = $('p.bold').text()
   const articleText = $('.article-html-content').text()
-  return articleText
+  return leadText + articleText
 }
 
 const speech = (text = 'Jónapot') => {
@@ -30,11 +31,11 @@ new MutationObserver(() => {
   const url = window.location.href;
   if (url !== lastUrl) {
     lastUrl = url;
-    onUrlChange();
+    addListenButton();
   }
 }).observe(document, {subtree: true, childList: true});
 
-const onUrlChange = () => {
+const addListenButton = () => {
   setTimeout(() => {
     $('.article_content-left').append(`
     <button class="hang-button">
@@ -74,4 +75,5 @@ $(() => {
       }
     </style>
   `);
+  addListenButton();
 })
